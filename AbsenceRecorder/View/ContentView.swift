@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var divisions: [Division] = Division.examples
+    var currentDate: Date = Date()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView{
+            List(divisions, id: \.self.code) { division in
+                Text("\(division.code)")
+                    .padding()
+            }
+            .navigationTitle(getShortDate())
+            
         }
-        .padding()
+    }
+    
+    func getShortDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        
+        return formatter.string(from: currentDate)
     }
 }
-
 #Preview {
     ContentView()
 }
