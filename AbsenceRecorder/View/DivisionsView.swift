@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var currentDate: Date = Date()
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             List(state.divisions, id: \.self.code) { division in
                 NavigationLink(destination: AbsenceView(division: division)) {
                     DivisionItem(division: division)
@@ -20,17 +20,18 @@ struct ContentView: View {
             }
             .navigationTitle(currentDate.getShortDate())
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { currentDate = currentDate.previousDay() }) {
-                        Image(systemName: "arrow.backward")
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: { currentDate = currentDate.previousDay() }) {
+                            Image(systemName: "arrow.backward")
+                        }
                     }
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(actions: { currentDate = currentDate.nextDay() }) {
-                        Image(systemName: "arrow.forward")
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: { currentDate = currentDate.nextDay() }) {
+                            Image(systemName: "arrow.forward")
+                        }
                     }
-                }
+                     
             }
         }
     }
