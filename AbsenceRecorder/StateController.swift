@@ -8,9 +8,9 @@
 import Foundation
 
 class StateController: ObservableObject {
-    @Published var divisions: [Division]
+    @Published var divisions: [Division] = Division.examples
     
-    init() {
-        divisions = Division.examples
-    }
+    static let shared = StateController()
+    
+    private init() {}
 }

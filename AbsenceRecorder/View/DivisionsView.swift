@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var state: StateController
+    @ObservedObject var stateController = StateController.shared
     @State private var currentDate: Date = Date()
     
     var body: some View {
         NavigationStack{
-            List(state.divisions, id: \.self.code) { division in
+            List(stateController.divisions, id: \.self.code) { division in
                 NavigationLink(destination: AbsenceView(absence: division.createAbsenceOrGetExistingIfAvailable(for: currentDate))) {
                     DivisionItem(division: division)
                 }
@@ -38,5 +38,4 @@ struct ContentView: View {
 }
 #Preview {
     ContentView()
-        .environmentObject(StateController())
 }

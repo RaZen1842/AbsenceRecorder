@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StatisticsView: View {
-    @EnvironmentObject var state: StateController
+    @ObservedObject var state: StateController = StateController.shared
     
     var body: some View {
         Text("Statistics: \(state.divisions[0].code)")

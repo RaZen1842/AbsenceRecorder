@@ -13,7 +13,7 @@ class Absence {
     
     init(date: Date, students: [Student]) {
         takenOn = date
-        studentAbsences = students.map { StudentAbsence(student: $0) }
+        studentAbsences = students.map { StudentAbsence(student: $0, isAbsent: false) }
     }
     
     #if DEBUG
