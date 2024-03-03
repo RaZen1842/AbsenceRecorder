@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850BEC592B94A785009BF8CC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BEC582B94A785009BF8CC /* FileManager.swift */; };
 		852D9DE02B9129C100609F16 /* AbsenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D9DDF2B9129C100609F16 /* AbsenceItem.swift */; };
 		852D9DE22B912C5800609F16 /* StudentAbsence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D9DE12B912C5800609F16 /* StudentAbsence.swift */; };
 		852D9DE42B912E9000609F16 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D9DE32B912E9000609F16 /* Absence.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850BEC582B94A785009BF8CC /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		852D9DDF2B9129C100609F16 /* AbsenceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceItem.swift; sourceTree = "<group>"; };
 		852D9DE12B912C5800609F16 /* StudentAbsence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAbsence.swift; sourceTree = "<group>"; };
 		852D9DE32B912E9000609F16 /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				85A4A1C72B8E8A4500941698 /* Date.swift */,
+				850BEC582B94A785009BF8CC /* FileManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				8550CBBF2B86065F00CFD433 /* Students.swift in Sources */,
 				85A4A1C82B8E8A4500941698 /* Date.swift in Sources */,
 				85A4A1D02B8E942C00941698 /* RootTabView.swift in Sources */,
+				850BEC592B94A785009BF8CC /* FileManager.swift in Sources */,
 				852D9DE22B912C5800609F16 /* StudentAbsence.swift in Sources */,
 				8550CB952B86040B00CFD433 /* DivisionsView.swift in Sources */,
 				852D9DE02B9129C100609F16 /* AbsenceItem.swift in Sources */,

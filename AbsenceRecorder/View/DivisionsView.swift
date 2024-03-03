@@ -18,6 +18,9 @@ struct ContentView: View {
                     DivisionItem(division: division)
                 }
             }
+            .onAppear(perform: {
+                stateController.saveToFile()
+            })
             .navigationTitle(currentDate.getShortDate())
             .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
